@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application name -->
+    <string name="app_name">SilentTime</string>
+
+    <!-- Days of the week -->
+    <string name="day_sunday">SUN</string>
+    <string name="day_monday">MON</string>
+    <string name="day_tuesday">TUE</string>
+    <string name="day_wednesday">WED</string>
+    <string name="day_thursday">THU</string>
+    <string name="day_friday">FRI</string>
+    <string name="day_saturday">SAT</string>
+
+    <!-- Buttons -->
+    <string name="btn_set_silencer">Set</string>
+    <string name="btn_update_silencer">Update</string>
+    <string name="btn_set">Set</string>
+    <string name="btn_keep_it_off">Keep it off</string>
+
+    <!-- Labels -->
+    <string name="list_empty">No items in list.</string>
+    <string name="default_time">00:00</string>
+    <string name="default_silencer_name">Silencer name</string>
+    <string name="label_to">to</string>
+    <string name="label_start_end_time">Start Time</string>
+    <string name="label_repeat">Repeat</string>
+    <string name="add_new_silencer">New</string>
+    <string name="add_new_silencer_hint">Enter description</string>
+
+</resources>

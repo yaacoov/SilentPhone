@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Must change Icons -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_main"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/navitem_time"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/time"/>
+    </group>
+    <group
+        android:id="@+id/menu_more"
+        android:checkableBehavior="all">
+        <item
+            android:id="@+id/navitem_settings"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/settings"/>
+        <item
+            android:id="@+id/navitem_rate"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/rate"/>
+    </group>
+</menu>

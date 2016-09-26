@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="General"
+        android:key="PREF_GENERAL">
+        <ListPreference
+            android:key="PREF_RINGER_VOLUME"
+            android:title="Ringer volume"
+            android:summary="Set restore ringer volume"
+            android:entries="@array/ringer_volume_options"
+            android:entryValues="@array/ringer_volume_values"
+            android:defaultValue="2"
+            android:dialogTitle="Ringer volume"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

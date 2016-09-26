@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_background">
+
+    <TextView
+        style="@style/DetailFragmentLabels"
+        android:id="@+id/start_end_textview"
+        android:text="@string/label_start_end_time"/>
+
+    <LinearLayout
+        android:id="@+id/timers_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/repeat_textview"
+        android:layout_below="@+id/start_end_textview"
+        android:gravity="center"
+        android:weightSum="5">
+
+        <TextView
+            style="@style/DetailFragmentClockLabels"
+            android:id="@+id/details_start_time_text_view"
+            android:layout_weight="2"
+            android:text="@string/default_time"
+            android:textSize="60sp"
+            android:textColor="@drawable/textview_selector"
+            android:clickable="true"/>
+
+        <TextView
+            style="@style/DetailFragmentClockLabels"
+            android:id="@+id/label_to"
+            android:layout_weight="1"
+            android:text="@string/label_to"
+            android:textSize="40sp"/>
+
+        <TextView
+            style="@style/DetailFragmentClockLabels"
+            android:id="@+id/details_end_time_text_view"
+            android:layout_weight="2"
+            android:text="@string/default_time"
+            android:textSize="60sp"
+            android:textColor="@drawable/textview_selector"
+            android:clickable="true"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/DetailFragmentLabels"
+        android:id="@+id/repeat_textview"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:layout_above="@+id/details_days_of_week_container"
+        android:text="@string/label_repeat"/>
+
+    <LinearLayout
+        android:id="@+id/details_days_of_week_container"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/details_set_button"
+        android:weightSum="7">
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_sunday"
+            android:text="@string/day_sunday"/>
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_monday"
+            android:text="@string/day_monday"/>
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_tuesday"
+            android:text="@string/day_tuesday"/>
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_wednesday"
+            android:text="@string/day_wednesday"/>
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_thursday"
+            android:text="@string/day_thursday"/>
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_friday"
+            android:text="@string/day_friday"/>
+
+        <CheckedTextView
+            style="@style/DetailCheckedTextViews"
+            android:id="@+id/txt_saturday"
+            android:text="@string/day_saturday"/>
+
+    </LinearLayout>
+
+    <Button
+        style="@style/SilentButton"
+        android:id="@+id/details_set_button"
+        android:text="@string/btn_set_silencer"/>
+
+</RelativeLayout>

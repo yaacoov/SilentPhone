@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_background">
+
+    <RelativeLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/card_view_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.rengwuxian.materialedittext.MaterialEditText xmlns:app="http://schemas.android.com/apk/com/yarik/silenttime"
+                style="@style/SilentEditText"
+                android:id="@+id/details_name_edittext"
+                android:layout_marginRight="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/abc_primary_text_material_dark"
+                app:baseColor="@color/abc_primary_text_material_dark"
+                app:primaryColor="@color/abc_primary_text_material_dark"/>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/details_silencer_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@+id/details_name_edittext"
+                android:layout_toEndOf="@+id/details_name_edittext"
+                android:layout_centerVertical="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@null"
+                android:textColor="@color/abc_primary_text_material_dark"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:checked="false" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/card_view_image_container"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@null"
+            android:alpha="0.24"
+            android:src="@drawable/custom_divider"/>
+
+        <TextView
+            style="@style/DetailFragmentLabels"
+            android:id="@+id/start_end_textview"
+            android:layout_below="@+id/divider"
+            android:paddingTop="@dimen/padding"
+            android:paddingBottom="@dimen/padding"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/label_start_end_time"/>
+
+        <LinearLayout
+            android:id="@+id/timers_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/repeat_textview"
+            android:layout_below="@+id/start_end_textview"
+            android:gravity="center"
+            android:weightSum="5">
+
+            <TextView
+                style="@style/DetailFragmentClockLabels"
+                android:id="@+id/details_start_time_text_view"
+                android:layout_weight="2"
+                android:text="@string/default_time"
+                android:textSize="45sp"
+                android:clickable="true"/>
+
+            <TextView
+                style="@style/DetailFragmentClockLabels"
+                android:id="@+id/label_to"
+                android:layout_weight="1"
+                android:text="@string/label_to"
+                android:textSize="30sp"/>
+
+            <TextView
+                style="@style/DetailFragmentClockLabels"
+                android:id="@+id/details_end_time_text_view"
+                android:layout_weight="2"
+                android:text="@string/default_time"
+                android:textSize="45sp"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/DetailFragmentLabels"
+            android:id="@+id/repeat_textview"
+            android:layout_above="@+id/details_days_of_week_container"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="@string/label_repeat"/>
+
+        <LinearLayout
+            android:id="@+id/details_days_of_week_container"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_above="@+id/details_set_button"
+            android:weightSum="7">
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_sunday"
+                android:text="@string/day_sunday"/>
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_monday"
+                android:text="@string/day_monday"/>
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_tuesday"
+                android:text="@string/day_tuesday"/>
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_wednesday"
+                android:text="@string/day_wednesday"/>
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_thursday"
+                android:text="@string/day_thursday"/>
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_friday"
+                android:text="@string/day_friday"/>
+
+            <CheckedTextView
+                style="@style/DetailCheckedTextViews"
+                android:id="@+id/txt_saturday"
+                android:text="@string/day_saturday"/>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/SilentButton"
+            android:id="@+id/details_set_button"
+            android:text="@string/btn_set_silencer"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@null"
+        android:background="@drawable/toolbar_shadow_land"/>
+
+</RelativeLayout>

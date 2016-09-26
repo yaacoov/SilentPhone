@@ -1,0 +1,171 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_root_container"
+    android:baselineAligned="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none"
+    android:background="@color/color_background">
+
+    <RelativeLayout
+        android:id="@+id/location_row_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:paddingEnd="8dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <ImageView
+            android:id="@+id/time_tile_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:contentDescription="@null"/>
+
+        <TextView
+            style="@style/ListRowTextViews"
+            android:id="@+id/silencer_name"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@+id/time_tile_view"
+            android:layout_toRightOf="@+id/time_tile_view"
+            android:text="@string/default_silencer_name"
+            android:textSize="16sp"
+            android:textColor="@color/color_primary_accent"/>
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/list_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/silencer_name"
+            android:layout_toEndOf="@+id/silencer_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:focusable="false"
+            android:clickable="false"/>
+
+
+        <TextView
+            style="@style/ListRowTextViews"
+            android:id="@+id/startTimeTextView"
+            android:layout_below="@+id/silencer_name"
+            android:layout_toEndOf="@+id/time_tile_view"
+            android:layout_toRightOf="@+id/time_tile_view"/>
+
+        <TextView
+            style="@style/ListRowTextViews"
+            android:id="@+id/toTextView"
+            android:layout_below="@+id/silencer_name"
+            android:layout_toRightOf="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/startTimeTextView"
+            android:padding="5dp"
+            android:text="@string/label_to"/>
+
+        <TextView
+            style="@style/ListRowTextViews"
+            android:id="@+id/endTimeTextView"
+            android:layout_below="@+id/silencer_name"
+            android:layout_toRightOf="@+id/toTextView"
+            android:layout_toEndOf="@+id/toTextView"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewSunday"
+            android:text="@string/day_sunday"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/time_tile_view"
+            android:layout_toRightOf="@+id/time_tile_view"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewMonday"
+            android:text="@string/day_monday"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/textViewSunday"
+            android:layout_toRightOf="@+id/textViewSunday"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewTuesday"
+            android:text="@string/day_tuesday"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/textViewMonday"
+            android:layout_toRightOf="@+id/textViewMonday"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewWednesday"
+            android:text="@string/day_wednesday"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/textViewTuesday"
+            android:layout_toRightOf="@+id/textViewTuesday"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewThursday"
+            android:text="@string/day_thursday"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/textViewWednesday"
+            android:layout_toRightOf="@+id/textViewWednesday"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewFriday"
+            android:text="@string/day_friday"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/textViewThursday"
+            android:layout_toRightOf="@+id/textViewThursday"/>
+
+        <TextView
+            style="@style/ListRowDaysOfWeekTextViews"
+            android:id="@+id/textViewSaturday"
+            android:text="@string/day_saturday"
+            android:layout_below="@+id/startTimeTextView"
+            android:layout_toEndOf="@+id/textViewFriday"
+            android:layout_toRightOf="@+id/textViewFriday"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dismiss_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/txt_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:padding="22dp"
+            android:gravity="center|start"
+            android:text="@string/delete"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:clickable="false"
+            android:hapticFeedbackEnabled="true"/>
+
+        <TextView
+            android:id="@+id/txt_undo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="22dp"
+            android:gravity="center|end"
+            android:text="@string/undo"
+            android:textColor="#FFB300"
+            android:textSize="18sp"
+            android:clickable="false"/>
+    </LinearLayout>
+
+</FrameLayout>

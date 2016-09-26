@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <TextView
+        style="@style/ClockFragmentTextViews"
+        android:id="@+id/txt_fancyclock"
+        android:includeFontPadding="false"
+        android:gravity="bottom"/>
+
+    <TextView
+        style="@style/ClockFragmentTextViews"
+        android:id="@+id/txt_fancydate"
+        android:layout_below="@+id/txt_fancyclock"
+        android:textColor="@color/color_primary_accent"/>
+
+    <ImageView
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@null"
+        android:background="@drawable/toolbar_shadow_land"/>
+</RelativeLayout>
